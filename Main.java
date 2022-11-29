@@ -1,11 +1,12 @@
 public class Main {
-
+    
     private static long[] fibonacciCache;
-
+    
     public static void main(String[] args) {
         // ( 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 )
 
         int n = 1; // <-- Put here the numbers of how many fibonacci-arrays should be iterated.
+                   // Please keep in mind that you are being limited to 92.
 
         fibonacciCache = new long[n+1];
 
@@ -24,7 +25,9 @@ public class Main {
         }
 
         long nthFibonacciNumber = (fibonacci(n-1) + fibonacci(n-2));
+        
         fibonacciCache[n] = nthFibonacciNumber;
+        
         return nthFibonacciNumber;
     }
 }
